@@ -35,7 +35,10 @@ function setStudents(data) {
         while(house[i] == "")
             i++;
         house[i] = capFirstLetter(house[i]);
-        lastname = firstnames[firstnames.length-1];
+        if(firstnames.length>1)
+            lastname = firstnames[firstnames.length-1];
+        else
+            lastname = '';
         for(let j=0; j<halfBloods.length; j++)
             if(halfBloods[j] == lastname)
                 bloodtype = 1; //it is half blood
@@ -57,6 +60,7 @@ function setStudents(data) {
         else
             student.push({firstname:firstname, lastname:lastname, gender:st.gender, house:house[i], bloodtype:bt, picture:lastname.toLowerCase() + "_" + firstname[0].toLowerCase(), prefect:0, expelled:0, inq:0});
     });
+    showStudents();
 }
 
 function setBloods(data) {
@@ -71,4 +75,21 @@ function setBloods(data) {
 function capFirstLetter(s) {
     s = s[0].toUpperCase() + s.slice(1).toLowerCase();
     return s;
+}
+
+function showStudents() {
+    for(let i=0; i<student.length; i++) {
+        const myTemplate = document.querySelector("#studentTemplate").content;
+        const studentClone = myTemplate.cloneNode(true);
+        if(student[i].lastname == "Patil")
+            studentClone.querySelector(".studentPicture").src = "images/" + student[i].picture + student[i].firstname.slice(1) + ".png";
+        else
+            studentClone.querySelector(".studentPicture").src = "images/" + student[i].picture + ".png";
+        if(student[i].nickname)
+            studentClone.querySelector(".name").textContent = student[i].firstname + " " + student[i].nickname + " " + student[i].lastname;
+        else
+            studentClone.querySelector(".name").textContent = student[i].firstname + " " + student[i].lastname;
+        const parent = document.querySelector("#stud_cont");
+        parent.appendChild(studentClone);
+    }
 }

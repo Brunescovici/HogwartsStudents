@@ -1,0 +1,54 @@
+nav {
+    border-bottom: 1px black solid;
+}
+
+#settings_menu {
+    width: 250px;
+    position: relative;
+    left: 0;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px black solid;
+    padding: 50px 10px 50px 10px;
+}
+
+#searchArea {
+    display: flex;
+    margin: 25px 0;
+}
+
+#searchBtn {
+    margin-left: 10px;
+}
+
+.checkBox_cont {
+    margin: 5px 0;
+}
+
+#stud_cont {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.student {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.studentPicture {
+    position: relative;
+    width: 108px;
+    height: 114px;
+    cursor: pointer;
+}
+
+.name {
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+}

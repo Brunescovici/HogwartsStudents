@@ -1,16 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Hogwarts Students</title>
+  </head>
+  <body>
+    <nav>
+      <h1>HOGWARTS</h1>
+    </nav>
     <main>
-
+      <div id="settings_menu">
+        <label for="sort">Sort by:</label>
+        <select name="sort" id="sort">
+          <option value="firstNameAZ">First Name A-Z</option>
+          <option value="firstNameZA">First Name Z-A</option>
+          <option value="lastNameAZ">Last Name A-Z</option>
+          <option value="lastNameZA">Last Name Z-A</option>
+          <option value="houseAZ">House A-Z</option>
+          <option value="houseZA">House Z-A</option>
+        </select>
+        <div id="searchArea">
+          <input type="search" id="search" placeholder="Seach..." />
+          <button id="searchBtn">Search</button>
+        </div>
+        <div class="checkBox_cont">
+          <input type="checkbox" id="showPrefects" name="prefects" />
+          <label for="prefects"> Prefects</label>
+        </div>
+        <div class="checkBox_cont">
+          <input type="checkbox" id="showSlytherin" name="slytherin" />
+          <label for="slytherin"> Slytherin students</label>
+        </div>
+        <div class="checkBox_cont">
+          <input type="checkbox" id="showRavenclaw" name="ravenclaw" />
+          <label for="ravenclaw"> Ravenclaw students</label>
+        </div>
+        <div class="checkBox_cont">
+          <input type="checkbox" id="showGryffindor" name="gryffindor" />
+          <label for="gryffindor"> Gryffindor students</label>
+        </div>
+        <div class="checkBox_cont">
+          <input type="checkbox" id="showHufflepuff" name="hufflepuff" />
+          <label for="hufflepuff"> Hufflepuff students</label>
+        </div>
+      </div>
+      <div id="stud_cont"></div>
     </main>
-</body>
+  </body>
 
-<script src="script.js"></script>
+  <template id="studentTemplate">
+    <article class="student">
+      <img class="studentPicture" src="" />
+      <h2 class="name"></h2>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
 </html>
