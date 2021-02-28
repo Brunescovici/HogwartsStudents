@@ -1,3 +1,7 @@
+* {
+    margin: 0;
+}
+
 nav {
     border-bottom: 1px black solid;
 }
@@ -51,4 +55,39 @@ nav {
 
 main {
     display: flex;
+}
+
+#grayBG {
+    position: fixed;
+    top: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    justify-content: center;
+}
+
+#overlay {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 10% 35%;
+    padding: 40px;
+    background-color: rgb(255, 255, 255);
+}
+
+#overlay button {
+    width: 200px;
+    height: 80px;
+}
+
+#overlay button:first-child {
+    width: 30px;
+    height: 30px;
+    border: 0;
+    border-radius: 50px;
 }
