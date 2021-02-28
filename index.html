@@ -24,36 +24,33 @@
         </select>
         <div id="searchArea">
           <input type="search" id="search" placeholder="Seach..." />
-          <button id="searchBtn">Search</button>
         </div>
         <div class="checkBox_cont">
-          <input type="checkbox" id="showPrefects" name="prefects" />
+          <input type="checkbox" id="showPrefects" class="cb" name="prefects" />
           <label for="prefects"> Prefects</label>
         </div>
         <div class="checkBox_cont">
-          <input type="checkbox" id="showSlytherin" name="slytherin" />
+          <input type="checkbox" id="showSlytherin" class="cb" name="slytherin" />
           <label for="slytherin"> Slytherin students</label>
         </div>
         <div class="checkBox_cont">
-          <input type="checkbox" id="showRavenclaw" name="ravenclaw" />
+          <input type="checkbox" id="showRavenclaw" class="cb" name="ravenclaw" />
           <label for="ravenclaw"> Ravenclaw students</label>
         </div>
         <div class="checkBox_cont">
-          <input type="checkbox" id="showGryffindor" name="gryffindor" />
+          <input type="checkbox" id="showGryffindor" class="cb" name="gryffindor" />
           <label for="gryffindor"> Gryffindor students</label>
         </div>
         <div class="checkBox_cont">
-          <input type="checkbox" id="showHufflepuff" name="hufflepuff" />
+          <input type="checkbox" id="showHufflepuff" class="cb" name="hufflepuff" />
           <label for="hufflepuff"> Hufflepuff students</label>
         </div>
         <div class="checkBox_cont">
-          <input type="checkbox" id="showExpelled" name="expelled" />
+          <input type="checkbox" id="showExpelled" class="cb" name="expelled" />
           <label for="expelled"> Expelled students</label>
         </div>
-        <div class="checkBox_cont">
-          <input type="checkbox" id="showNonExpelled" name="nonExpelled" />
-          <label for="nonExpelled"> Non-Expelled students</label>
-        </div>
+        <p id="showingStudents">Showing: </p>
+        <button id="inject">INJECT!</button>
       </div>
       <div id="stud_cont"></div>
       <div id="grayBG">
@@ -75,7 +72,7 @@
 
   <template id="studentTemplate">
     <article class="student">
-      <img class="studentPicture" src="" />
+      <img class="studentPicture" src="images/nopicture.png" />
       <h2 class="name"></h2>
     </article>
   </template>

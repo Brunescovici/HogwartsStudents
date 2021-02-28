@@ -91,3 +91,40 @@ main {
     border: 0;
     border-radius: 50px;
 }
+
+.expelledAnim {
+    animation-name: kf_expell;
+    animation-duration: 1s;
+}
+
+@keyframes kf_expell {
+    0% {
+        transform: scale(1, 1);
+    }
+    100% {
+        transform: scale(0, 0);
+    }
+}
+
+#inject {
+    background-color: red;
+    color: lime;
+    font-size: 20pt;
+    margin-top: 100px;
+}
+
+#inject:hover {
+    background-color: darkred;
+}
+
+#inject:active {
+    background-color: black;
+}
+
+#inject:disabled {
+    background-color: black;
+}
+
+#makeMember {
+    display: none;
+}
