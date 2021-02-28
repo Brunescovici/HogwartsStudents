@@ -415,9 +415,9 @@ document.querySelectorAll(".cb").forEach((cb) => {
 
 document.querySelector("#search").addEventListener("change", resetStudents);
 
-document.querySelector("#inject").addEventListener("click", injectYourself);
+document.querySelector("#inject").addEventListener("click", hackTheSystem);
 
-function injectYourself() {
+function hackTheSystem() {
   injected = 1;
   document.querySelector("#makeMember").style.display = "block";
   student.push({
